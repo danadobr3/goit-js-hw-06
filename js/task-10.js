@@ -1,12 +1,10 @@
-
-
-
 const selectors = {
   input: document.querySelector(".js-input"),
   create: document.querySelector(".js-create"),
   destroy: document.querySelector(".js-destroy"),
   boxes: document.querySelector('#boxes')
 };
+
 selectors.create.addEventListener("click", handlerCreate);
 selectors.destroy.addEventListener("click", handlerDestroy);
 
@@ -24,7 +22,8 @@ function createBoxes(amount) {
   handlerDestroy()
   let size = 20;
   const elements = []
- for (let i = 0; i < amount; i += 1) {
+
+  for (let i = 0; i < amount; i += 1) {
     size += 10;
 
     const div = document.createElement("div");
@@ -33,13 +32,14 @@ function createBoxes(amount) {
     div.style.backgroundColor = getRandomHexColor()
     elements.push(div)
   }
-selectors.boxes.append(...elements)
+
+  selectors.boxes.append(...elements)
 }
+
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
-
 
