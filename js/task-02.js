@@ -1,5 +1,3 @@
-const ingredientsList = document.getElementById('ingredients');
-
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -8,6 +6,8 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const ingredientsList = document.getElementById('ingredients');
 
 ingredients.forEach(ingredient => {
     const listItem = document.createElement(`li`);
