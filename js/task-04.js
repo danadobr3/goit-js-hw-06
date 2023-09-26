@@ -1,5 +1,5 @@
-const counter = document.getElementsById(`counter`);
-const valueSpan = document.getElementById("value");
+const counter = document.getElementById(`counter`);
+const valueSpan = document.getElementById(`value`);
 
 let counterValue = 0;
 
