@@ -9,12 +9,12 @@ destroyButton.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
   amount = parseInt(amount);
-  if (Number.isNaN(amount) || amount < 1 || amount > 100) {
-    alert('Please enter a valid number between 1 and 100.');
+  if (isNaN(amount) || amount < 1 || amount > 100) {
+   alert('Please enter a valid number between 1 and 100.');
     return;
   }
 
-  boxesDiv.innerHTML = '';
+boxesDiv.innerHTML = '';
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
@@ -26,7 +26,7 @@ function createBoxes(amount) {
     fragment.appendChild(box);
   }
 
-  boxesDiv.appendChild(fragment);
+    boxesDiv.appendChild(fragment);
 }
 
 function destroyBoxes() {
@@ -36,5 +36,5 @@ function destroyBoxes() {
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
-    .padStart(6, '0')}`;
+    .padStart(6, 0)}`;
 }

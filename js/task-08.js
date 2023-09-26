@@ -19,4 +19,3 @@ if (formDataObject.email === "" || formDataObject.password === "") {
   console.log(formData);
   form.reset();
 }
-
